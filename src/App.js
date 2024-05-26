@@ -4,6 +4,11 @@ import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetails from "./pages/ProductDetails";
+import UsersPage from "./pages/UsersPage";
+import AddUserPage from "./pages/AddUserPage";
+import UserDetails from "./pages/UserDetails";
+import EditUser from "./pages/EditUser";
+import DeleteUser from "./pages/DeleteUser";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,8 +23,28 @@ const router = createBrowserRouter([
     element: <ProductsPage />,
   },
   {
-    path: "/products/:id",
+    path: "/products/:productId",
     element: <ProductDetails />,
+  },
+  {
+    path: "/users",
+    element: <UsersPage />,
+  },
+  {
+    path: "/users/:id",
+    element: <UserDetails />,
+  },
+  {
+    path: "/users/add",
+    element: <AddUserPage />,
+  },
+  {
+    path: "/users/edit/:id",
+    element: <EditUser />,
+  },
+  {
+    path: "/users/delete/:id",
+    element: <DeleteUser />,
   },
   {
     path: "*",

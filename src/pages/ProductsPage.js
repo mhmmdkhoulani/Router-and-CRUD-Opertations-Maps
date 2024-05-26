@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 function ProductsPage() {
   const [products, setProducts] = useState([]);
@@ -39,7 +40,9 @@ function ProductsPage() {
                   <img src={product.thumbnail} width={"100px"} />
                 </td>
                 <td>
-                  <button className="btn btn-info">View Details</button>
+                  <Link to={`/products/${product.id}`} className="btn btn-info">
+                    View Details
+                  </Link>
                 </td>
               </tr>
             ))}

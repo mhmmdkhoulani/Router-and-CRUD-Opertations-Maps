@@ -34,6 +34,11 @@ function Navbar() {
                 Products
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to={"/users"}>
+                Users
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
